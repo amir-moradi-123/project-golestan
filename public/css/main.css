@@ -1,0 +1,2090 @@
+/*
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+.header-div-1 {
+  position: sticky;
+  inset: 0px;
+  z-index: 999;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 37 37 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 0) {
+  .header-div-1 {
+    height: 181px;
+    padding-bottom: 30px;
+    padding-top: 7.5px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header-div-1 {
+    height: 100px;
+    padding-top: 8px;
+    padding-bottom: 30px;
+  }
+}
+
+.header-img-1 {
+  position: absolute;
+  z-index: 20;
+  height: 105px;
+  width: 170px;
+}
+
+@media (min-width: 1000px) {
+  .header-img-1 {
+    right: 260px;
+    bottom: -50%;
+  }
+}
+
+.header-div-2 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 66px;
+  width: 927px;
+  padding-top: 25px;
+}
+
+.header-nav-1 {
+  margin-left: -20%;
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.header-a-1 {
+  margin-top: 5px;
+  height: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+  vertical-align: top;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tw-text-opacity: 1;
+  color: rgb(175 178 180 / var(--tw-text-opacity));
+  opacity: 0.9;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.header-a-1:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.header-span-1 {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  height: 50%;
+  width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  opacity: 0.3;
+}
+
+.header-a-2 {
+  position: relative;
+  z-index: 50;
+  margin-top: 5px;
+  height: 100%;
+  width: auto;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 17px;
+  --tw-text-opacity: 1;
+  color: rgb(175 178 180 / var(--tw-text-opacity));
+  opacity: 0.9;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.header-a-2:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.header-div-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  text-align: right;
+  line-height: 30px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.group:hover .header-div-3 {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 175px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 39 39 / var(--tw-bg-opacity));
+}
+
+.header-div-4 {
+  display: none;
+  height: 40px;
+  width: 100%;
+  padding: 2px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 0.3;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.header-div-4:hover {
+  opacity: 1;
+}
+
+.group:hover .header-div-4 {
+  display: block;
+}
+
+.ghore-div-1 {
+  position: relative;
+  height: 495px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 221 221 / var(--tw-bg-opacity));
+  opacity: 1;
+}
+
+.ghore-div-2 {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+  display: flex;
+  height: 350px;
+  width: 450px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.ghore-h2-1 {
+  position: absolute;
+  top: 40px;
+  right: -40px;
+  margin-top: -10px;
+  margin-bottom: 40px;
+  width: 330px;
+  padding: 20px;
+  text-align: center;
+  font-family: fontgol;
+  font-size: 35px;
+  line-height: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.ghore-h2-2 {
+  position: absolute;
+  top: 100px;
+  left: 110px;
+  width: 100%;
+  font-family: fontgol;
+  font-size: 25px;
+  --tw-text-opacity: 1;
+  color: rgb(75 75 75 / var(--tw-text-opacity));
+  opacity: 0.8;
+}
+
+.ghore-h2-3 {
+  position: absolute;
+  top: 140px;
+  right: -18px;
+  margin-top: 30px;
+  height: 132px;
+  width: 90%;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 18px;
+  line-height: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(137 137 137 / var(--tw-text-opacity));
+}
+
+.ghore-a-1 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+  opacity: 0.7;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.ghore-a-1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.moarefi-div-1 {
+  margin-top: 75px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: fontgol;
+  font-size: 15px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+}
+
+.moarefi-div-2 {
+  width: 700px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 15px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+}
+
+.moarefi-h2-1 {
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 18px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.moarefi-div-3 {
+  height: 105px;
+  width: 680px;
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.moarefi-div-4 {
+  margin-top: 40px;
+  height: 105px;
+  width: 680px;
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.moarefi-strong-1 {
+  font-size: 20px;
+  font-weight: 20px;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.moarefi-div-5 {
+  margin-top: 40px;
+  height: 105px;
+  width: 650px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 16px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.moarefi-h2-2 {
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 18px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.moarefi-span-1 {
+  text-align: right;
+  font-family: fontgol;
+  font-size: 20px;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.image-div-1 {
+  margin-top: 200px;
+  display: flex;
+  height: 290px;
+  width: 100%;
+  justify-content: center;
+}
+
+.image-div-2 {
+  display: flex;
+  height: 290px;
+  width: 842px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.image-div-3 {
+  position: relative;
+  height: 270px;
+  width: 205px;
+}
+
+.image-p-1 {
+  height: 21px;
+  width: 100%;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 70px;
+  --tw-text-opacity: 1;
+  color: rgb(124 125 126 / var(--tw-text-opacity));
+}
+
+.image-span-1 {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0px;
+  height: 1px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 74 74 / var(--tw-bg-opacity));
+  opacity: 0.3;
+}
+
+.rice-div-1 {
+  height: 1px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 74 74 / var(--tw-bg-opacity));
+  opacity: 0.3;
+}
+
+.rice-img-1 {
+  margin-top: 40px;
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rice-div-2 {
+  position: relative;
+  height: 520px;
+  width: 100%;
+}
+
+.rice-div-3 {
+  position: absolute;
+  bottom: 0px;
+  right: 400px;
+  z-index: 50;
+  height: 97px;
+  width: 290px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 28 36 / var(--tw-bg-opacity));
+  padding-right: 17px;
+  padding-bottom: 4px;
+  padding-left: 114px;
+  font-size: 22px;
+}
+
+.rice-p-1 {
+  height: 49px;
+  width: 159px;
+  padding-top: 5px;
+  padding-right: 20px;
+  text-align: end;
+  font-family: fontgol;
+  font-size: 27px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.rice-p-2 {
+  height: 44px;
+  width: 159px;
+  padding-top: 10px;
+  padding-right: 20px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 20px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.rice-div-4 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 20px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 214 159 / var(--tw-bg-opacity));
+}
+
+.rice-div-5 {
+  display: flex;
+  height: 327px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.rice-div-6 {
+  position: relative;
+  height: 287px;
+  width: 680px;
+  padding: 10px;
+}
+
+.rice-h2-1 {
+  height: 20px;
+  width: 660px;
+  padding-right: 23px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 25px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.rice-p-3 {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  height: 144px;
+  width: 720px;
+  padding-right: 80px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 17px;
+  line-height: 35px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.rice-a-1 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 35px;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.4;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  text-align: center;
+  font-family: fontgol;
+  font-size: 18px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+  opacity: 0.7;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.rice-a-1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.rice-a-2 {
+  position: absolute;
+  bottom: 0px;
+  right: 150px;
+  margin-right: 35px;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.4;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  text-align: center;
+  font-family: fontgol;
+  font-size: 18px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+  opacity: 0.7;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.rice-a-2:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.tea-div-1 {
+  position: relative;
+  height: 520px;
+  width: 100%;
+}
+
+.tea-img-1 {
+  margin-top: 40px;
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tea-div-2 {
+  position: absolute;
+  bottom: 0px;
+  right: 400px;
+  z-index: 50;
+  height: 97px;
+  width: 290px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 28 36 / var(--tw-bg-opacity));
+  padding-right: 17px;
+  padding-bottom: 4px;
+  padding-left: 114px;
+  font-size: 22px;
+}
+
+.tea-p-1 {
+  height: 49px;
+  width: 159px;
+  padding-top: 5px;
+  padding-right: 20px;
+  text-align: end;
+  font-family: fontgol;
+  font-size: 32px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tea-p-2 {
+  height: 44px;
+  width: 159px;
+  padding-top: 10px;
+  padding-right: 20px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 20px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tea-div-3 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 20px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 214 159 / var(--tw-bg-opacity));
+}
+
+.tea-div-4 {
+  display: flex;
+  height: 327px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.tea-div-5 {
+  position: relative;
+  margin-top: 60px;
+  height: 387px;
+  width: 680px;
+  padding: 10px;
+}
+
+.tea-h2-1 {
+  margin-top: 10px;
+  height: 20px;
+  width: 660px;
+  padding-right: 23px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 24px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.tea-p-3 {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  height: 144px;
+  width: 630px;
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+  line-height: 35px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.tea-p-4 {
+  position: absolute;
+  right: 35px;
+  bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  height: 144px;
+  width: 630px;
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+  line-height: 35px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.pistachio-div-1 {
+  position: relative;
+  height: 520px;
+  width: 100%;
+}
+
+.pistachio-div-2 {
+  position: absolute;
+  bottom: 0px;
+  right: 400px;
+  z-index: 50;
+  height: 97px;
+  width: 290px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 28 36 / var(--tw-bg-opacity));
+  padding-right: 17px;
+  padding-bottom: 4px;
+  padding-left: 114px;
+  font-size: 22px;
+}
+
+.pistachio-p-1 {
+  height: 49px;
+  width: 159px;
+  padding-top: 10px;
+  padding-right: 20px;
+  text-align: end;
+  font-family: fontgol;
+  font-size: 30px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.pistachio-p-2 {
+  margin-bottom: 2px;
+  height: 44px;
+  width: 159px;
+  padding-top: 10px;
+  padding-right: 24px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 22px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.pistachio-div-3 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 20px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 214 159 / var(--tw-bg-opacity));
+}
+
+.pistachio-div-4 {
+  display: flex;
+  height: 450px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.pistachio-div-5 {
+  position: relative;
+  margin-top: 60px;
+  height: 387px;
+  width: 680px;
+  padding: 10px;
+}
+
+.pistachio-h2-1 {
+  height: 20px;
+  width: 660px;
+  padding-right: 23px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 25px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.pistachio-p-3 {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  height: 144px;
+  width: 630px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 18px;
+  line-height: 35px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.pistachio-p-4 {
+  position: absolute;
+  right: 35px;
+  bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  height: 144px;
+  width: 630px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 18px;
+  line-height: 35px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.pistachio-a-1 {
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+  margin-right: 35px;
+  height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.4;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  line-height: 35px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+  opacity: 0.7;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.pistachio-a-1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.bg-div-1 {
+  position: sticky;
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.jounral-div-1 {
+  position: relative;
+  margin-top: 130px;
+  height: 60px;
+  width: 100%;
+}
+
+.jounral-span-1 {
+  position: absolute;
+  right: 250px;
+  bottom: 40px;
+  height: 33px;
+  width: 200px;
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 22px;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.jounral-div-2 {
+  display: flex;
+  height: 652px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 228 176 / var(--tw-bg-opacity));
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+}
+
+.jounral-div-3 {
+  height: 651px;
+  width: 319px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.jounral-img-1 {
+  height: 313px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.jounral-img-1:hover {
+  opacity: 0.8;
+}
+
+.jounral-div-4 {
+  position: relative;
+  height: 290px;
+  width: 100%;
+  padding: 10px;
+  font-family: fontgol;
+  font-size: 12px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+}
+
+.jounral-a-1 {
+  position: absolute;
+  right: 1.25rem;
+  top: 30px;
+  height: 40px;
+  width: 100%;
+  padding-left: 0px;
+  text-align: end;
+  font-family: fontgol;
+  font-size: 25px;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.jounral-p-1 {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 60px;
+  margin-top: 10px;
+  height: 150px;
+  width: 275px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 15px;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(124 125 126 / var(--tw-text-opacity));
+}
+
+.jounral-a-2 {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  margin-right: 35px;
+  height: 40px;
+  width: 110px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.4;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  text-align: center;
+  font-family: fontgol;
+  font-size: 20px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+  opacity: 0.7;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.jounral-a-2:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.responsibility-div-1 {
+  position: relative;
+  margin-top: 60px;
+  display: flex;
+  height: 600px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 81 83 / var(--tw-bg-opacity));
+}
+
+.responsibility-h2-1 {
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 18px;
+  --tw-text-opacity: 1;
+  color: rgb(213 236 225 / var(--tw-text-opacity));
+}
+
+.responsibility-div-2 {
+  margin-top: 10px;
+  height: 1.5px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(11 100 103 / var(--tw-bg-opacity));
+}
+
+.responsibility-div-3 {
+  margin-top: 10px;
+  display: flex;
+  height: 54px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsibility-span-1 {
+  height: 50px;
+  width: 126px;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 30px;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(0 157 162 / var(--tw-text-opacity));
+}
+
+.responsibility-span-2 {
+  height: 33px;
+  width: 193px;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 20px;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(0 216 223 / var(--tw-text-opacity));
+}
+
+.responsibility-div-4 {
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 17px;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(188 179 192 / var(--tw-text-opacity));
+}
+
+.responsibility-img-1 {
+  position: absolute;
+  bottom: -100px;
+  z-index: 20;
+  height: 320px;
+  width: 395px;
+}
+
+.responsibility-div-5 {
+  height: 20px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 214 159 / var(--tw-bg-opacity));
+}
+
+.responsibility-div-6 {
+  display: flex;
+  height: 350px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsibility-div-7 {
+  position: relative;
+  margin-top: 220px;
+  height: 387px;
+  width: 680px;
+  padding: 10px;
+}
+
+.responsibility-h2-2 {
+  height: 20px;
+  width: 660px;
+  padding-right: 23px;
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 20px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.responsibility-p-1 {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  height: 144px;
+  width: 680px;
+  padding-right: 40px;
+  text-align: right;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(129 133 136 / var(--tw-text-opacity));
+}
+
+.icon-div-1 {
+  margin-top: 100px;
+  display: flex;
+  height: 95px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 239 239 / var(--tw-bg-opacity));
+}
+
+.icon-div-2 {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+.footer-div-1 {
+  height: 25px;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 28 36 / var(--tw-bg-opacity));
+}
+
+.footer-div-2 {
+  position: relative;
+  display: flex;
+  height: 500px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 40 40 / var(--tw-bg-opacity));
+}
+
+.footer-div-3 {
+  margin-top: 30px;
+  display: flex;
+  height: 364px;
+  width: 700px;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.footer-div-4 {
+  display: flex;
+  height: 100%;
+  width: 170px;
+  flex-direction: column;
+}
+
+.footer-div-5 {
+  display: flex;
+  height: 90px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-img-1 {
+  height: 90px;
+  width: 150px;
+  padding-left: 20px;
+}
+
+.footer-div-6 {
+  margin-top: 20px;
+  height: 1px;
+  width: 90%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  opacity: 0.4;
+}
+
+.footer-h2-1 {
+  height: 22px;
+  width: 100%;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  line-height: 36px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footer-div-7 {
+  margin-top: 10px;
+  display: flex;
+  height: 150px;
+  width: 150px;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  text-align: right;
+}
+
+.footer-a-1 {
+  margin-right: 10px;
+  height: 28px;
+  width: 100%;
+  padding-top: 10px;
+  font-family: fontgol;
+  font-size: 16px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 0.6;
+}
+
+.footer-a-1:hover {
+  opacity: 1;
+}
+
+.footer-div-8 {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  height: 125px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-span-1 {
+  width: 326px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 13px;
+  --tw-text-opacity: 1;
+  color: rgb(159 159 159 / var(--tw-text-opacity));
+}
+
+.footer-span-2 {
+  margin-top: -10px;
+  height: 17px;
+  width: 255px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  --tw-text-opacity: 1;
+  color: rgb(123 123 123 / var(--tw-text-opacity));
+}
+
+.video-div-1 {
+  display: flex;
+  height: 650px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 230px;
+  padding-right: 230px;
+  padding-top: 45px;
+}
+
+.video-div-2 {
+  display: flex;
+  height: 600px;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.video-div-3 {
+  display: flex;
+  height: 83%;
+  width: 315px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #525252;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.video-div-3:default {
+  align-items: center;
+}
+
+.video-div-4 {
+  height: 70%;
+  width: 100%;
+}
+
+@media (min-width: 0) {
+  .video-div-4 {
+    height: 40%;
+    width: 100%;
+  }
+}
+
+.tittle-div {
+  position: relative;
+  display: flex;
+  height: 100px;
+  width: 97.9%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 10px;
+}
+
+.h2-tittle {
+  margin-right: 5px;
+  height: 40px;
+  width: 100%;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 25px;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.video-p-1 {
+  margin-top: 5px;
+  height: 60px;
+  text-align: right;
+  font-family: fontgol;
+  font-size: 17px;
+  line-height: 2.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+.video-a-1 {
+  position: absolute;
+  bottom: -180px;
+  right: -10px;
+  margin-right: 35px;
+  height: 40px;
+  width: 110px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.4;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  text-align: center;
+  font-family: fontgol;
+  font-size: 20px;
+  line-height: 40px;
+  --tw-text-opacity: 1;
+  color: rgb(74 74 74 / var(--tw-text-opacity));
+  opacity: 0.7;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+
+.video-a-1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  opacity: 1;
+}
+
+.log-div-1 {
+  margin-top: 75px;
+  margin-bottom: 45px;
+  display: flex;
+  height: 47px;
+  width: 100%;
+  justify-content: flex-end;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-right: 300px;
+  padding-top: 10px;
+  font-weight: 700;
+}
+
+.log-span-1 {
+  height: 36px;
+  width: 51px;
+  font-family: fontgol;
+  font-size: 25px;
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-\[380px\] {
+  left: 380px;
+}
+
+.top-\[40px\] {
+  top: 40px;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.mb-\[80px\] {
+  margin-bottom: 80px;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
+.mt-\[30px\] {
+  margin-top: 30px;
+}
+
+.mt-\[40px\] {
+  margin-top: 40px;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
+}
+
+.h-\[270px\] {
+  height: 270px;
+}
+
+.h-\[90\%\] {
+  height: 90%;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[205px\] {
+  width: 205px;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.bg-\[\#F7F9FB\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 249 251 / var(--tw-bg-opacity));
+}
+
+.pr-\[270px\] {
+  padding-right: 270px;
+}
+
+.pt-\[70px\] {
+  padding-top: 70px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:bg-\[\#4CA7D5\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(76 167 213 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#7C95C9\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 149 201 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#BD2D2D\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(189 45 45 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#BF2D2D\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 45 45 / var(--tw-bg-opacity));
+}
+
+
+
+ 

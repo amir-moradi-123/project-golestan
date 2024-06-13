@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    font-family: sans;
+}
+@font-face {
+    font-family:font;
+    src: url(../font/IRANSansLight\ \(1\).woff) format(eot);
+    src: url(../font/IRANSansWeb_Medium.woff2) format(ttf);
+    src: url(../font/IRANSansWeb_Medium\ \(1\).woff2) format(woff2);
+    src: url(../font/IRANSansWeb_Medium\ \(2\).woff2) format(woff2);
+}
+.html body{
+    direction: rtl;
+}
